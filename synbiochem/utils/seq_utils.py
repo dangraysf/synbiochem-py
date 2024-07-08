@@ -238,8 +238,7 @@ class CodonOptimiser():
         '''Gets the codon usage table for a given taxonomy id.'''
         aa_to_codon_prob = {aa_code: {} for aa_code in AA_CODES.values()}
 
-        url = 'http://www.kazusa.or.jp/codon/cgi-bin/showcodon.cgi?species=' \
-            + self.__taxonomy_id + '&aa=1&style=GCG'
+        url = f'https://web.archive.org/web/20230930140340/https://www.kazusa.or.jp/codon/cgi-bin/showcodon.cgi?species={self.__taxonomy_id}'
 
         in_codons = False
 
